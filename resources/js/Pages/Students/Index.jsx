@@ -190,11 +190,29 @@ const Index = () => {
 
                   <td className="border px-4 py-2 flex flex-col-3 gap-2">
                     <ul className="flex gap-4">
-                      <li><FaEye className="text-blue-600 hover:text-blue-800 cursor-pointer" /></li>
-                      <li><FaEdit className="text-green-600 hover:text-green-800 cursor-pointer" /></li>
-                      <li><FaTrash className="text-red-600 hover:text-red-800 cursor-pointer" /></li>
+                        {/* View student details */}
+                        <li>
+                            <Link href={`/students/${student.id}`}>
+                                <FaEye className="text-blue-600 hover:text-blue-800 cursor-pointer" />
+                            </Link>
+                        </li>
+
+                        {/* Edit student */}
+                        <li>
+                            <Link href={`/students/${student.id}/edit`}>
+                                <FaEdit className="text-green-600 hover:text-green-800 cursor-pointer" />
+                            </Link>
+                        </li>
+
+                        {/* Delete student (you’ll likely wire this to a form or router.delete) */}
+                        <li>
+                            <Link href={`/students/${student.id}/delete`}>
+                                <FaTrash className="text-red-600 hover:text-red-800 cursor-pointer" />
+                            </Link>
+                        </li>
                     </ul>
-                  </td>
+                    </td>
+
                 </tr>
               ))
             )}

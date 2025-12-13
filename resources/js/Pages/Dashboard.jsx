@@ -17,7 +17,7 @@ export default function Dashboard() {
                     <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900 flex flex-col-4 float-end gap-4">
 
-                            <Link href="/students/index" className="text-blue-600 hover:underline">
+                            <Link href="/students" className="text-blue-600 hover:underline">
                                 Students List
                             </Link>
 

@@ -6,6 +6,7 @@ use Inertia\Inertia;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class StudentController extends Controller
 {
@@ -92,4 +93,44 @@ class StudentController extends Controller
         return redirect()->route('students.index')
             ->with('success', 'Student created successfully!');
     }
+
+    public function edit($id) {
+
+        $student = Student::findOrFail($id);
+
+        return Inertia::render('Students/Edit', [
+            'student' => $student,
+        ]);
+    }
+
+public function update(Request $request, $id)  {
+
+        $student = Student::findOrFail($id);
+
+        $validated = $request->validate([
+            'name'   => 'required|string|max:255',
+            'email'  => [
+                'required',
+                'email',
+                Rule::unique('students', 'email')->ignore($student->id),
+            ],
+            'age'    => 'required|integer|min:1',
+            'gender' => 'required|in:male,female',
+            'dob'    => 'required|date',
+            'score'  => 'nullable|numeric|min:0|max:100',
+            'image'  => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $validated['image'] = $request->file('image')->store('students', 'public');
+        }
+
+        $student->update($validated);
+
+        return redirect()->route('students.index')
+            ->with('success', 'Student updated successfully!');
+    }
+
+
+
 }

@@ -29,6 +29,10 @@ Route::controller(StudentController::class)->group(function () {
     Route::get('/students', 'index')->name('students.index');
     Route::get('/students/create', 'create')->name('students.create');
     Route::post('/students', 'store')->name('students.store');
+    Route::get('/students/{id}/edit', 'edit')->name('students.edit');
+    Route::put('/students/{id}', 'update')->name('students.update');
+  // Route::get('/students/show/{id}', 'show')->name('students.show');
+ //   Route::delete('/students/delete/{id}', 'destroy')->name('students.destroy');
 
     // Uncomment these when you implement show/edit/update/delete
     /*
