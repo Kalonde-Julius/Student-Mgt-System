@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-area, #print-area * {
+    visibility: visible;
+  }
+  #print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: scale(0.9);     /* shrink to fit */
+    transform-origin: top left;
+  }
+
+  /* Hide buttons/links */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Prevent page breaks inside the card */
+  #print-area {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  @page {
+    size: A4;      /* or 'letter' */
+    margin: 12mm;  /* adjust margins to taste */
+  }
+}

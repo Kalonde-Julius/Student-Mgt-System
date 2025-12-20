@@ -67,6 +67,22 @@ const Index = () => {
   const safeRows = students && students.data ? students.data : [];
   const safeLinks = students && students.links ? students.links : [];
 
+  const handleDelete = (id) => {
+    if (confirm('Are you sure you want to delete this student ?')) {
+
+      router.visit(route('students.destroy', id), {
+        method: 'delete',
+        preserveState: true,
+
+        onSuccess: () => {
+          setMsg('Student deleted successfully.');
+          setVisible(true);
+        },
+
+      });
+    }
+  };
+
   return (
     <DashboardLayout>
       <main className="flex-1 p-6">
@@ -151,7 +167,7 @@ const Index = () => {
                 </td>
               </tr>
             ) : (
-              safeRows.map((student) => (
+            safeRows.map((student) => (
                 <tr key={student.id} className="hover:bg-gray-200 w-full text-sm">
                   <td className="border px-4 py-2">
                     {student.image ? (
@@ -183,7 +199,7 @@ const Index = () => {
                   <td className="border px-4 py-2">{student.gender}</td>
                   <td className="border px-4 py-2">{student.score}</td>
 
-                  {/* ✅ Submitted By fix */}
+                  {/* ✅ Submitted By */}
                   <td className="border px-4 py-2">
                     {student.user ? student.user.name : auth?.user?.name}
                   </td>
@@ -192,7 +208,7 @@ const Index = () => {
                     <ul className="flex gap-4">
                         {/* View student details */}
                         <li>
-                            <Link href={`/students/${student.id}`}>
+                            <Link href={route('students.show', student.id)}>
                                 <FaEye className="text-blue-600 hover:text-blue-800 cursor-pointer" />
                             </Link>
                         </li>
@@ -206,9 +222,9 @@ const Index = () => {
 
                         {/* Delete student (you’ll likely wire this to a form or router.delete) */}
                         <li>
-                            <Link href={`/students/${student.id}/delete`}>
+                            <button onClick={() => handleDelete(student.id)}>
                                 <FaTrash className="text-red-600 hover:text-red-800 cursor-pointer" />
-                            </Link>
+                            </button>
                         </li>
                     </ul>
                     </td>
