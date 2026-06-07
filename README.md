@@ -21,76 +21,47 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## To run this web app using Laravel Herd
+To run this web app using Laravel Herd:
 
-## 1) In your Laravel herd folder, cd create a folder &name it student. Then copy and paste all the files extracted from the downloaded zip folder from Giithub.
+1) In your Laravel herd folder, cd create a folder &name it student. Then copy and paste all the files extracted from the downloaded zip folder from Giithub.
 
-## 2) Clean the old vendor and cache via cmd in your project folder (student):
+2) Clean the old vendor and cache via cmd in your project folder (student):
 rmdir /s /q vendor 2>$null
 del composer.lock 2>$null
 composer clear-cache
 rmdir /s /q vendor
 del composer.lock
 
-## 3) Installing PHP dependencies via cmd:
+3) Installing PHP dependencies via cmd:
 composer install
 
-## 4) Rename .env.example to .env
+4) Rename .env.example to .env
 
-## 5) Generating app key:
+5) Generating app key:
 php artisan key:generate
 
-## 6) Installing Node dependencies:
+6) Installing Node dependencies:
 npm install
 
-## 7) Fixing vulnerabilities:
+7) Fixing vulnerabilities:
 npm audit fix
 
-## 8) Open .env & confirm:
+8) Open .env & confirm:
 DB_CONNECTION=sqlite
 DB_DATABASE=database/database.sqlite
 
-## 9) Running migrations & seeding the db:
+9) Running migrations & seeding the db:
 php artisan migrate
 php artisan migrate --seed
 
-## 10) Clearing caches:
+10) Clearing caches:
 php artisan config:clear
 php artisan cache:clear
 php artisan route:clear
 
-## 11) npx update-browserslist-db@latest
+11) npx update-browserslist-db@latest
 
-## 12) Starting Vite dev server:
+12) Starting Vite dev server:
 npm run dev
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
