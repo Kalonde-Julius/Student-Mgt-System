@@ -7,61 +7,50 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-To run this web app using Laravel Herd:
+<span> Instructions for running this web app on your PC via Laravel Herd </span> <br/>:
 
-1) In your Laravel herd folder, cd create a folder &name it student. Then copy and paste all the files extracted from the downloaded zip folder from Giithub.
+1) Inside your Laravel Herd folder via CMD/terminal, locate your project directory: <br/> 
+cd student <br/>.
 
-2) Clean the old vendor and cache via cmd in your project folder (student):
-rmdir /s /q vendor 2>$null
-del composer.lock 2>$null
-composer clear-cache
-rmdir /s /q vendor
-del composer.lock
+2) Clean the old vendor and cache via cmd in your project folder (student): <br/>
+rmdir /s /q vendor 2>$null <br/>
+del composer.lock 2>$null <br/>
+composer clear-cache <br/>
+rmdir /s /q vendor <br/>
+del composer.lock <br/>
 
-3) Installing PHP dependencies via cmd:
+3) Installing PHP dependencies via cmd: <br/>
 composer install
 
-4) Rename .env.example to .env
+4) Rename .env.example to .env <br/>
 
-5) Generating app key:
-php artisan key:generate
+5) Generating app key: <br/>
+php artisan key:generate <br/>
 
-6) Installing Node dependencies:
-npm install
+6) Installing Node dependencies: <br/>
+npm install <br/>
 
-7) Fixing vulnerabilities:
-npm audit fix
+7) Fixing vulnerabilities: <br/>
+npm audit fix <br/>
 
-8) Open .env & confirm:
-DB_CONNECTION=sqlite
-DB_DATABASE=database/database.sqlite
+8) Open .env & confirm: <br/>
+DB_CONNECTION=sqlite <br/>
+DB_DATABASE=database/database.sqlite <br/>
 
-9) Running migrations & seeding the db:
-php artisan migrate
-php artisan migrate --seed
+9) Running migrations & seeding the db: <br/>
+php artisan migrate <br/>
+php artisan migrate --seed <br/>
 
-10) Clearing caches:
-php artisan config:clear
-php artisan cache:clear
-php artisan route:clear
+10) Clearing caches: <br/>
+php artisan config:clear <br/>
+php artisan cache:clear <br/>
+php artisan route:clear <br/>
 
-11) npx update-browserslist-db@latest
+11) npx update-browserslist-db@latest <br/>
 
-12) Starting Vite dev server:
-npm run dev
+12) Starting Vite dev server: <br/>
+npm run dev <br/>
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
