@@ -21,11 +21,48 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## To run this web app using Laravel Herd
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 1) In your Laravel herd folder, cd create a folder &name it student. Then copy and paste all the files extracted from the downloaded zip folder from Giithub.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 2) Clean the old vendor and cache via cmd in your project folder (student):
+rmdir /s /q vendor 2>$null
+del composer.lock 2>$null
+composer clear-cache
+rmdir /s /q vendor
+del composer.lock
+
+## 3) Installing PHP dependencies via cmd:
+composer install
+
+## 4) Rename .env.example to .env
+
+## 5) Generating app key:
+php artisan key:generate
+
+## 6) Installing Node dependencies:
+npm install
+
+## 7) Fixing vulnerabilities:
+npm audit fix
+
+## 8) Open .env & confirm:
+DB_CONNECTION=sqlite
+DB_DATABASE=database/database.sqlite
+
+## 9) Running migrations & seeding the db:
+php artisan migrate
+php artisan migrate --seed
+
+## 10) Clearing caches:
+php artisan config:clear
+php artisan cache:clear
+php artisan route:clear
+
+## 11) npx update-browserslist-db@latest
+
+## 12) Starting Vite dev server:
+npm run dev
 
 ## Laravel Sponsors
 
