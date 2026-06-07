@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# <span> Instructions for running this web app on your PC via Laravel Herd: </span> <br/>
+<h3> Instructions for running this web app on your PC via Laravel Herd: </h3> <br/>
 
 1) Inside your Laravel Herd folder via CMD/terminal, locate your project directory: <br/> 
 cd student <br/>
