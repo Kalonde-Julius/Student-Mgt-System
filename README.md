@@ -45,10 +45,8 @@ php artisan migrate --seed <br/>
 php artisan config:clear <br/>
 php artisan cache:clear <br/>
 php artisan route:clear <br/>
+npx update-browserslist-db@latest <br/>
 
-11) npx update-browserslist-db@latest <br/>
-
-12) Starting Vite dev server: <br/>
+11) Starting Vite dev server: <br/>
 npm run dev <br/>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
