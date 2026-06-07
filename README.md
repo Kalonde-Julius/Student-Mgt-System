@@ -7,9 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-<span> Instructions for running this web app on your PC via Laravel Herd: </span> <br/>
+# <span> Instructions for running this web app on your PC via Laravel Herd: </span> <br/>
 
 1) Inside your Laravel Herd folder via CMD/terminal, locate your project directory: <br/> 
 cd student <br/>
