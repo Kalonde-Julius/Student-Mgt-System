@@ -9,10 +9,10 @@
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-<span> Instructions for running this web app on your PC via Laravel Herd </span> <br/>:
+<span> Instructions for running this web app on your PC via Laravel Herd: </span> <br/>
 
 1) Inside your Laravel Herd folder via CMD/terminal, locate your project directory: <br/> 
-cd student <br/>.
+cd student <br/>
 
 2) Clean the old vendor and cache via cmd in your project folder (student): <br/>
 rmdir /s /q vendor 2>$null <br/>
@@ -22,7 +22,7 @@ rmdir /s /q vendor <br/>
 del composer.lock <br/>
 
 3) Installing PHP dependencies via cmd: <br/>
-composer install
+composer install <br/>
 
 4) Rename .env.example to .env <br/>
 
